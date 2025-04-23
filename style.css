@@ -1,29 +1,77 @@
-/* Style the top navigation bar */
-.topnav {
-    overflow: hidden;
-    background-color: #ffffff;
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #0b0a0a;
-    text-align: left;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .button {
-    background-color: #aa3304; 
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-  .button4 {border-radius: 12px;}
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+
+.flex-container > div {
+  margin: 10px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+img.logo {
+  align-self: baseline;
+  vertical-align: text-bottom;
+}
+
+.navLogo {
+  width:55%;
+}
+
+.navLinks {
+  width:10%;
+  align-self: center;
+  text-align: right;
+}
+
+.navButton {
+  width:15%;
+  align-self: center;
+  text-align: right;
+}
+
+.button {
+  background-color: #aa3304; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.buttonLogin {border-radius: 12px;}
+
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;/*  Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#img_columna2 {
+  width: 50%;
+  height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.btn {
+  border: none; 
+  border-radius: 20px;
+  color: rgb(23, 151, 104); /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}

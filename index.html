@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<!--https://tailwindfromscratch.com/website-projects/bookmark/index.html-->
+
 <body>
-    <P>BOOKMARK</P>
-    <div class="topnav">
-        <a href="#">FEATURES</a>
-        <a href="#">PRICING</a>
-        <a href="#">CONTACT</a>
-        <a href="#">LOGIN</a>
+    <div class="flex-container">
+        <div class="navLogo">
+            <p><img class="logo" src="sphere1280.png" width="25" height="25"> BOOKMARK</p>
+        </div>
+        <div class="navLinks"><a href="#">FEATURES</a></div>
+        <div class="navLinks"><a href="#">PRICING</a></div>
+        <div class="navLinks"><a href="#">CONTACT</a></div>
+        <div class="navButton"><button class="buttonLogin">LOGIN</button></div>
     </div>
 
-    <button class="button button4">LOGIN</button>
+    <div class="row">
+        <div class="column" style="background-color:#18626c;">
+            <h2>A Simple Bookmark Manager</h2>
+            <p>S"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+            <button class="btn success">Get it on Chrome</button>
+            <button class="btn info">Get it on Firefox</button>
+        </div>
+        <div class="column" style="background-color:#18626c;">
+            <img src="keyboard_1280.png" id="img_columna2">
+        </div>
+    </div>
+
+
 </body>
+
 </html>
