@@ -1,10 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header: logo and menu style */
 .flex-container {
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: flex-start;/* Alinea los ítems al inicio del eje principal (izquierda) */
   background-color: #ffffff;
 }
 
+/* Container for flexboxes */
 .flex-container > div {
   margin: 10px;
   line-height: 20px;
@@ -23,55 +33,83 @@ img.logo {
 .navLinks {
   width:10%;
   align-self: center;
-  text-align: right;
+  /*text-align: right;*/
 }
 
 .navButton {
   width:15%;
   align-self: center;
-  text-align: right;
+  text-align: left;
 }
 
-.button {
+.buttonLogin {
   background-color: #aa3304; 
   border: none;
+  border-radius: 12px;
   color: white;
   padding: 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: inline-block;/*allows to set a width and height on the element*/
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
 }
-.buttonLogin {border-radius: 12px;}
 
-* {
-  box-sizing: border-box;
+/* Container for flexboxes para dos columnas*/
+.row {
+  display: -webkit-flex;
+  display: flex;
+  background-color:#ffffff;
 }
+
+/* 2 columns that sits next to each other */
 .column {
-  float: left;
-  width: 50%;
   padding: 10px;
-  height: 300px;/*  Should be removed. Only for demonstration */
+  height: 300px; 
+  width: 50%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Left and right column */
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
+
+#text { /*color para textos descriptivos*/
+  color: grey;
+}
+
+/*falta terminar*/
+.button {
+  background-color: #3F47CC; 
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.btnGoogle {
+  background-color: white; 
+}
+
+.btnGoogle:hover {
+  background-color: #3F47CC;
+  color: white;
+}
+
+.btnFirefox {
+  background-color: grey; 
+}
+
+.btnFirefox:hover {
+  background-color: white;
+  color: black;
 }
 
 #img_columna2 {
-  width: 50%;
+  width: 100%;
   height: auto; /* Para mantener la proporción de la imagen */
-}
-
-.btn {
-  border: none; 
-  border-radius: 20px;
-  color: rgb(23, 151, 104); /* Add a text color */
-  padding: 14px 28px; /* Add some padding */
-  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  background-image: url('Forma2.jpg');
+  background-size: auto;
 }
