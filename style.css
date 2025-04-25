@@ -1,9 +1,17 @@
-* {
-  box-sizing: border-box;
+body {
+  background-color: transparent; /* O el color de fondo detrás del marco */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/*Marco de toda la página*/
+.contenedor-principal {
+  width: 80%; /* Ajusta el ancho según necesites */
+  margin: 0 auto; /* Centra el contenedor principal horizontalmente */
+  background-color: #fff; /* El color de fondo de tu contenido principal */
+  padding-left: 50px; /* Define el ancho del marco izquierdo (transparente) */
+  padding-right: 50px; /* Define el ancho del marco derecho (transparente) */
+  box-sizing: border-box; /*el alto y el ancho del elemento incluye el padding y el border*/
+  min-height: 100vh; /* Altura mínima para cubrir la pantalla */
 }
 
 /* Header: logo and menu style */
@@ -14,8 +22,11 @@ body {
   background-color: #ffffff;
 }
 
-/* Container for flexboxes */
-.flex-container > div {
+a { /*quitamos todos los underline de los enlaces*/
+  text-decoration: none;
+}
+
+.flex-container > div { /* Container for flexboxes */
   margin: 10px;
   line-height: 20px;
   font-size: 14px;
@@ -33,7 +44,9 @@ img.logo {
 .navLinks {
   width:10%;
   align-self: center;
-  /*text-align: right;*/
+}
+.navLinks > a { /*enlaces <a> que son hijos directos de elementos con la clase navLinks*/
+  color: grey;
 }
 
 .navButton {
@@ -50,66 +63,93 @@ img.logo {
   padding: 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;/*allows to set a width and height on the element*/
+  display: inline-block;/*allow to set a width and height on the element con los elementos uno al lado del otro*/
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
 }
 
-/* Container for flexboxes para dos columnas*/
-.row {
-  display: -webkit-flex;
+/* Central container for flexboxes: 2 columns */
+.contenedor-central {
   display: flex;
-  background-color:#ffffff;
 }
 
-/* 2 columns that sits next to each other */
-.column {
-  padding: 10px;
-  height: 300px; 
-  width: 50%;
+.column-1, .column-2 { 
+  flex: 1;/*ambas columnas ocupan el mismo espacio disponible (50% del ancho cada una) independientemente de su contenido*/
 }
 
-/* Left and right column */
-.column.side {
-   -webkit-flex: 1;
-   -ms-flex: 1;
-   flex: 1;
+.column-1 {
+  display: flex;
+  flex-direction: column;
 }
 
-#text { /*color para textos descriptivos*/
-  color: grey;
+/*columna 1: Browser Buttons*/
+#title {
+  font-size: 60px;
 }
 
-/*falta terminar*/
+#text { 
+  color: grey; /*color para textos descriptivos*/
+  font-size: 25px;
+}
+
+.buttons-container { 
+  display: flex;
+  gap: 10px; /*Establece espacio entre botones*/
+}
+
 .button {
   background-color: #3F47CC; 
-  border: none;
-  border-radius: 6px;
-  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.25rem;
+  padding: 14px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .btnGoogle {
-  background-color: white; 
+  background-color: #3F47CC; 
+  color:white;
+  border-color: #3F47CC;
 }
 
 .btnGoogle:hover {
-  background-color: #3F47CC;
-  color: white;
+  background-color: white;
+  color:#3F47CC;
 }
 
 .btnFirefox {
   background-color: grey; 
+  color: black;
+  border-color: grey;
 }
 
 .btnFirefox:hover {
   background-color: white;
-  color: black;
+  color: grey;
 }
 
-#img_columna2 {
-  width: 100%;
-  height: auto; /* Para mantener la proporción de la imagen */
-  background-image: url('Forma2.jpg');
-  background-size: auto;
+/*columna 2*/
+.superpuestas { 
+  position: relative;
+  width: 100%; /* ajusto si quiero limitar el tamaño */
+  height: 400px; 
+}
+
+.imagen-fondo {
+  position: absolute;/*posición respecto a la relativa*/
+  top: 130px;        /* Desplazo hacia abajo */
+  left: 180px;       /* Desplazo hacia la derecha */
+  width: 70%;        /* Tamaño */
+  z-index: 1;        /* orden de apilamiento: la cantidad menor queda detrás*/
+  opacity: 0.8;
+  /*border: 2px solid red; borde rojo solo para pruebas */
+}
+
+.imagen-frontal {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
 }

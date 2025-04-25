@@ -10,30 +10,41 @@
 <!--https://tailwindfromscratch.com/website-projects/bookmark/index.html-->
 
 <body>
-    <!--Encabezado-->
-    <div class="flex-container">
-        <div class="navLogo">
-            <p><img class="logo" src="sphere1280.png" width="25" height="25"> BOOKMARK</p>
+    <!--Marco de la página-->
+    <div class="contenedor-principal">
+        <!--Encabezado-->
+        <div class="flex-container">
+            <div class="navLogo">
+                <p><img class="logo" src="sphere1280.png" width="25" height="25"> <b>BOOKMARK</b></p>
+            </div>
+            <div class="navLinks"><a href="#">FEATURES</a></div>
+            <div class="navLinks"><a href="#">PRICING</a></div>
+            <div class="navLinks"><a href="#">CONTACT</a></div>
+            <div class="navButton"><button class="buttonLogin">LOGIN</button></div>
         </div>
-        <div class="navLinks"><a href="#">FEATURES</a></div>
-        <div class="navLinks"><a href="#">PRICING</a></div>
-        <div class="navLinks"><a href="#">CONTACT</a></div>
-        <div class="navButton"><button class="buttonLogin">LOGIN</button></div>
-    </div>
 
-    <div class="row">
-        <div class="column side">
-            <h1>A Simple Bookmark Manager</h1>
-            <p id="text">S"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-            <button class="button btnGoogle">Get it on Chrome</button>
-            <button class="button btnFirefox">Get it on Firefox</button>
+        <!--Cuerpo: fila de dos columnas-->
+        <div class="contenedor-central">
+            <div class="column-1">
+                <h1 id="title">A Simple Bookmark Manager</h1>
+                <p id="text">S"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                <!--Buttons browsers-->
+                <div class="buttons-container">
+                    <a href="#" class="button btnGoogle"><b>Get It On Chrome</b></a>
+                    <a href="#" class="button btnFirefox"><b>Get It On Firefox</b></a>
+                </div>
+            </div>
+            <div class="column-2">
+                <div class="superpuestas">
+                    <img src="imagen-fondo2.jpg" class="imagen-fondo" alt="Imagen de fondo">
+                    <img src="illustration-hero.svg" class="imagen-frontal" alt="Imagen frontal">
+                </div>
+            </div>
+            
         </div>
-        <div class="column side">
-            <img src="illustration-hero.svg" id="img_columna2">
         </div>
     </div>
-
 
 </body>
 
