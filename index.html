@@ -10,21 +10,22 @@
 <!--https://tailwindfromscratch.com/website-projects/bookmark/index.html-->
 
 <body>
-    <!--Marco de la página-->
-    <div class="contenedor-principal">
-        <!--Encabezado-->
-        <div class="flex-container">
-            <div class="navLogo">
-                <p><img class="logo" src="sphere1280.png" width="25" height="25"> <b>BOOKMARK</b></p>
-            </div>
-            <div class="navLinks"><a href="#">FEATURES</a></div>
-            <div class="navLinks"><a href="#">PRICING</a></div>
-            <div class="navLinks"><a href="#">CONTACT</a></div>
-            <div class="navButton"><button class="buttonLogin">LOGIN</button></div>
+    <!--Encabezado-->
+    <nav class="flex-container">
+        <div class="navLogo">
+            <p id="textLogo"><img class="logo" src="sphere1280.png" width="25" height="25"> <b>BOOKMARK</b></p>
         </div>
+        <div class="navLinks"><a href="#">FEATURES</a></div>
+        <div class="navLinks"><a href="#">PRICING</a></div>
+        <div class="navLinks"><a href="#">CONTACT</a></div>
+        <div class="navButton"><button class="buttonLogin">LOGIN</button></div>
+    </nav>
 
-        <!--Cuerpo: fila de dos columnas-->
+    <!--Section Hero-->
+    <section id="hero">
+        <!--Container for image and content-->
         <div class="contenedor-central">
+            <!--Content-->
             <div class="column-1">
                 <h1 id="title">A Simple Bookmark Manager</h1>
                 <p id="text">S"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -35,17 +36,170 @@
                     <a href="#" class="button btnFirefox"><b>Get It On Firefox</b></a>
                 </div>
             </div>
+            <!--Image-->
             <div class="column-2">
                 <div class="superpuestas">
                     <img src="imagen-fondo2.jpg" class="imagen-fondo" alt="Imagen de fondo">
                     <img src="illustration-hero.svg" class="imagen-frontal" alt="Imagen frontal">
                 </div>
             </div>
-            
         </div>
+    </section>
+
+    <!-- Features Heading -->
+    <section id="features">
+        <div class="features-container">
+            <h2 class="features-title">Features</h2>
+            <p class="features-description">
+                Our aim is to make it quick and easy for you to access your favourite
+                websites. Your bookmarks sync between your devices so you can access
+                them on the go.
+            </p>
         </div>
+    </section>
     </div>
 
-</body>
+    <!-- Features tabs -->
+    <section id="tabs">
+        <div class="container">
+            <div class="background-tabs"></div>
 
+            <div class="tabs-container">
+                <!-- Tab 1 -->
+                <div class="tab" data-target="panel-1">
+                    <div class="tab-title" data-target="panel-1">
+                        Simple Bookmarking
+                    </div>
+                </div>
+
+                <!-- Tab 2 -->
+                <div class="tab" data-target="panel-2">
+                    <div class="tab-title" data-target="panel-2">
+                        Speedy Searching
+                    </div>
+                </div>
+
+                <!-- Tab 3 -->
+                <div class="tab" data-target="panel-3">
+                    <div class="tab-title active" data-target="panel-3">
+                        Easy Sharing
+                    </div>
+                </div>
+            </div>
+
+            <div id="panels" class="panels-container">
+                <!-- Panel 1 -->
+                <div class="panel panel-1 hidden">
+                    <div class="panel-image">
+                        <img src="images/illustration-features-tab-1.svg" alt="">
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-heading">Bookmark in one click</h3>
+                        <p class="panel-description">
+                            Organize your bookmarks however you like. Our simple drag-and-drop
+                            interface gives you complete control over how you manage your favourite sites.
+                        </p>
+                        <div class="button-container">
+                            <a href="#" class="panel-button">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="panel panel-2 hidden">
+                    <div class="panel-image">
+                        <img src="images/illustration-features-tab-2.svg" alt="">
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-heading">Intelligent search</h3>
+                        <p class="panel-description">
+                            Our powerful search feature will help you find saved sites in no
+                            time at all. No need to trawl through all of your bookmarks.
+                        </p>
+                        <div class="button-container">
+                            <a href="#" class="panel-button">More Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="panel panel-3">
+                    <div class="panel-image">
+                        <img src="imagen-fondo3.jpg" class="imagen-fondo3" alt="Imagen de fondo">
+                        <img src="pantalla2.jpg" class="imagen-frontal3" alt="">
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-heading">Share your bookmarks</h3>
+                        <p class="panel-description">
+                            Easily share your bookmarks and collections with others. Create a shareable link that you
+                            can send at the click of a button.
+                        </p>
+                        <div class="button-container">
+                            <a href="#" class="panel-button">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Dowload Heading-->
+    <section id="download">
+        <div class="contenedor">
+          <h2 class="titulo-principal">
+            Download the extension
+          </h2>
+          <p class="parrafo-principal">
+            We've got more browsers in the pipeline. Please do let us know if
+            you've got a favourite you'd like us to prioritize.
+          </p>
+        </div>
+      </section>
+      
+    <!--Download Boxes-->  
+    <section id="download-boxes">
+        <div class="contenedor-cajas">
+          
+          <!-- Caja 1 -->
+          <div class="caja">
+            <div class="caja-imagen">
+              <img src="images/logo-chrome.svg" alt="">
+            </div>
+            <h5 class="titulo-caja">Add to Chrome</h5>
+            <p class="texto-version">Minimum Version 62</p>
+            <div class="caja-dots">
+              <a href="#" class="boton-caja">Add & Install Extension</a>
+            </div>
+          </div>
+      
+          <!-- Caja 2 -->
+          <div class="caja caja-con-margen-medio">
+            <div class="caja-imagen">
+              <img src="images/logo-firefox.svg" alt="">
+            </div>
+            <h5 class="titulo-caja">Add to Firefox</h5>
+            <p class="texto-version">Minimum Version 55</p>
+            <div class="caja-dots">
+              <a href="#" class="boton-caja">Add & Install Extension</a>
+            </div>
+          </div>
+      
+          <!-- Caja 3 -->
+          <div class="caja caja-con-margen-grande">
+            <div class="caja-imagen">
+              <img src="images/logo-opera.svg" alt="">
+            </div>
+            <h5 class="titulo-caja">Add to Opera</h5>
+            <p class="texto-version">Minimum Version 46</p>
+            <div class="caja-dots">
+              <a href="#" class="boton-caja">Add & Install Extension</a>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
+
+</body>
 </html>

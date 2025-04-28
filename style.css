@@ -1,35 +1,32 @@
-body {
-  background-color: transparent; /* O el color de fondo detrás del marco */
-  font-family: Arial, Helvetica, sans-serif;
-}
+/*
+::before,
+::after {
+  box-sizing: border-box; /*include the padding and border in an element's total width and height
+  border-width: 0;
+  border-style: solid;
+}*/
 
-/*Marco de toda la página*/
-.contenedor-principal {
-  width: 80%; /* Ajusta el ancho según necesites */
-  margin: 0 auto; /* Centra el contenedor principal horizontalmente */
-  background-color: #fff; /* El color de fondo de tu contenido principal */
-  padding-left: 50px; /* Define el ancho del marco izquierdo (transparente) */
-  padding-right: 50px; /* Define el ancho del marco derecho (transparente) */
-  box-sizing: border-box; /*el alto y el ancho del elemento incluye el padding y el border*/
-  min-height: 100vh; /* Altura mínima para cubrir la pantalla */
+/* Estilos del body */
+body {
+  background-color: white;
+  font-family: 'Arial', sans-serif; /* Puedes cambiar a la que quieras */
+  margin: 0; /*margen de toda la página 0px*/
+  box-sizing: border-box; /*include the padding and border in an element's total width and height*/
 }
 
 /* Header: logo and menu style */
 .flex-container {
+  max-width: 1400px;
   display: flex;
-  width: 100%;
-  justify-content: flex-start;/* Alinea los ítems al inicio del eje principal (izquierda) */
-  background-color: #ffffff;
+  margin-left: auto; /*The browser calculates a left margin*/
+  margin-right: auto;
+  padding: 1.5rem; /* 1.5rem = 24px en todos los lados */
+  position: relative;
+  font-size: 18px;
 }
 
 a { /*quitamos todos los underline de los enlaces*/
   text-decoration: none;
-}
-
-.flex-container > div { /* Container for flexboxes */
-  margin: 10px;
-  line-height: 20px;
-  font-size: 14px;
 }
 
 img.logo {
@@ -37,22 +34,27 @@ img.logo {
   vertical-align: text-bottom;
 }
 
+#textLogo {
+  font-size: 20px;
+}
+
 .navLogo {
-  width:55%;
+  width:60%;
 }
 
 .navLinks {
   width:10%;
   align-self: center;
+  text-align: right;
 }
 .navLinks > a { /*enlaces <a> que son hijos directos de elementos con la clase navLinks*/
   color: grey;
 }
 
 .navButton {
-  width:15%;
+  width:10%;
   align-self: center;
-  text-align: left;
+  text-align: right;
 }
 
 .buttonLogin {
@@ -71,7 +73,11 @@ img.logo {
 
 /* Central container for flexboxes: 2 columns */
 .contenedor-central {
+  max-width: 1400px;   
   display: flex;
+  margin-left: auto; /*The browser calculates a left margin*/
+  margin-right: auto;
+  padding: 1.5rem;
 }
 
 .column-1, .column-2 { 
@@ -91,6 +97,8 @@ img.logo {
 #text { 
   color: grey; /*color para textos descriptivos*/
   font-size: 25px;
+  max-width: 28rem; /* Máximo ancho: 448px*/
+  text-align: left; /* Texto centrado */
 }
 
 .buttons-container { 
@@ -133,7 +141,8 @@ img.logo {
 .superpuestas { 
   position: relative;
   width: 100%; /* ajusto si quiero limitar el tamaño */
-  height: 400px; 
+  /*height: 400px;*/ 
+  justify-content: center;
 }
 
 .imagen-fondo {
@@ -152,4 +161,347 @@ img.logo {
   width: 80%;
   margin: 0 auto;
   display: block;
+}
+
+/*Features Heading*/
+.features-container {
+  margin: 4rem auto; /* 4rem:margen arriba; auto:centra horizontalmente el elemento dentro de su contenedor.*/
+  padding-left: 1.5rem; /*La unidad em es relativa al tamaño de fuente del elemento (2em significa el doble del tamaño de la fuente actual).*/
+  padding-right: 1.5rem;
+  max-width: 1400px;
+}
+
+.features-title {
+  margin-bottom: 1.5rem; 
+  font-size: 2.25rem; /* 2rem es el doble del tamaño de la fuente actual */
+  font-weight: 600; /* =font-semibold; 400 is the same as normal, and 700 is the same as bold*/
+  text-align: center;
+}
+
+.features-description {
+  max-width: 28rem; /* max-w-md ≈ 28rem en Tailwind */
+  margin: 0 auto;
+  text-align: center;
+  color: hsl(229, 8%, 60%); /* Aproximación de text-grayishBlue */
+}
+
+/*Features tabs*/
+/* Contenedor principal */
+.container {
+  position: relative;
+  margin: 6rem auto 8rem auto; /* arriba - derecha - abajo - izquierda */
+  padding: 0 1.5rem;
+  max-width: 1400px;
+}
+
+/* Fondo detrás de tabs */
+.background-tabs {
+  background: url('path/to/your/background.svg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Contenedor de las pestañas (tabs) */
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+@media (min-width: 768px) {
+  .tabs-container {
+    flex-direction: row;
+    gap: 2.5rem; /* espacio entre tabs en desktop */
+  }
+}
+
+/* Estilo de cada tab */
+.tab {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  color: #718096; /* text-gray-600 */
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.tab:hover {
+  color: #f25f3a; /* hover soft red */
+}
+
+@media (min-width: 768px) {
+  .tab {
+    border-bottom: none;
+    width: 33.33%;
+  }
+}
+
+/* Título dentro del tab */
+.tab-title {
+  padding: 1.25rem 0;
+}
+
+.tab-title.active {
+  border-bottom: 4px solid #f25f3a; /* rojo suave */
+}
+
+/* Paneles */
+.panels-container {
+  margin: 0 auto;
+}
+
+/* Cada panel */
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .panel {
+    flex-direction: row;
+    gap: 1.75rem;
+  }
+}
+
+/* Imagen del panel */
+.panel-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.imagen-frontal3 {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.imagen-fondo3 {
+  position: absolute;/*posición respecto a la relativa*/
+  top: 250px;        /* Desplazo hacia abajo */
+  left: 0px;       /* Desplazo hacia la derecha */
+  width: 35%;        /* Tamaño */
+  z-index: 1;        /* orden de apilamiento: la cantidad menor queda detrás*/
+  opacity: 0.8;
+  /*border: 2px solid red; borde rojo solo para pruebas */
+}
+
+@media (min-width: 768px) {
+  .panel-image {
+    width: 50%;
+  }
+}
+
+/* Contenido del panel */
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .panel-content {
+    width: 50%;
+  }
+}
+
+/* Heading del panel */
+.panel-heading {
+  margin-top: 8rem;
+  font-size: 1.875rem; /* 3xl */
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .panel-heading {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+/* Descripción */
+.panel-description {
+  max-width: 500px;
+  color: #9ca3af; /* text-grayishBlue */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .panel-description {
+    text-align: left;
+  }
+}
+
+/* Botón de más información */
+.button-container {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    margin-left: 0;
+  }
+}
+
+.panel-button {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #5368df; /* soft blue */
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.panel-button:hover {
+  background-color: #fff;
+  color: #5368df;
+  border: 2px solid #5368df;
+}
+
+/* Panel oculto */
+.hidden {
+  display: none;
+}
+
+/*Download Heading*/
+.contenedor {
+  max-width: 1400px;      /* container: max width estándar */
+  margin-left: auto;      /* Centrado horizontalmente */
+  margin-right: auto;
+  padding-left: 1.5rem;   /* 24px de padding lateral */
+  padding-right: 1.5rem;
+}
+
+.titulo-principal {
+  margin-bottom: 1.5rem;  /* = 24px */
+  font-size: 1.875rem;    /* = 30px */
+  font-weight: 600;       /* font-semibold */
+  text-align: center;     /* text-center */
+}
+
+/* En pantallas grandes (mínimo 768px) */
+@media (min-width: 768px) {
+  .titulo-principal {
+    font-size: 2.25rem;   /* text-4xl = 36px */
+  }
+}
+
+.parrafo-principal {
+  max-width: 32rem;       /* 512px */
+  margin-left: auto;      
+  margin-right: auto;
+  text-align: center;     /* text-center */
+  color: gris;       
+}
+
+/*Download Boxes*/
+#download-boxes {
+  padding-top: 8rem;   /* 128px arriba */
+  padding-bottom: 8rem;
+}
+
+.contenedor-cajas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;    /*max-width: 80rem; max-w-5xl = 1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5rem; /* 40px */
+  padding-right: 2.5rem;
+  gap: 2.5rem;          /* espacio entre cajas verticalmente */
+}
+
+/* En pantallas medianas (>= 768px) */
+@media (min-width: 768px) {
+  .contenedor-cajas {
+    flex-direction: row;
+    gap: 1.75rem;       /* md:space-x-7 = 28px entre cajas horizontalmente */
+    padding-left: 1.5rem; /* md:px-6 = 24px */
+    padding-right: 1.5rem;
+  }
+}
+
+.caja {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1.5rem;  /* py-6 = 24px */
+  padding-bottom: 1.5rem;
+  text-align: center;
+  border-radius: 0.5rem; /* rounded-lg = 8px */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* sombra suave */
+  gap: 1rem;
+}
+
+/* Para añadir márgenes adicionales a la segunda y tercera caja en escritorio */
+@media (min-width: 768px) {
+  .caja {
+    width: 33.333%; /* md:w-1/3 */
+  }
+  .caja-con-margen-medio {
+    margin-top: 2rem;   /* md:mt-8 = 32px */
+  }
+  .caja-con-margen-grande {
+    margin-top: 4rem;   /* md:mt-16 = 64px */
+  }
+}
+
+.caja-imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-caja {
+  padding-top: 1.5rem;  /* pt-6 */
+  font-size: 1.25rem;   /* text-xl = 20px */
+  font-weight: 700;     /* font-bold */
+}
+
+.texto-version {
+  color: #9095a7; /* similar a text-gray-400 */
+}
+
+.caja-dots {
+  background-image: url('path/to/dots-image.svg'); /* debes poner aquí la imagen de puntos */
+  background-repeat: repeat-x;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-transform: capitalize;
+}
+
+.boton-caja {
+  display: block;
+  width: 100%;
+  padding-top: 0.75rem; /* py-3 = 12px arriba/abajo */
+  padding-bottom: 0.75rem;
+  background-color: #5267df; /* bg-softBlue */
+  color: white;
+  border: 2px solid #5267df;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+/* Hover en el botón */
+.boton-caja:hover {
+  background-color: white;
+  color: #5267df;
+  border: 2px solid #5267df;
 }
