@@ -10,16 +10,31 @@
 <!--https://tailwindfromscratch.com/website-projects/bookmark/index.html-->
 
 <body>
-    <!--Encabezado-->
-    <nav class="flex-container">
-        <div class="navLogo">
-            <p id="textLogo"><img class="logo" src="sphere1280.png" width="25" height="25"> <b>BOOKMARK</b></p>
+    <!--Flex container For Nav Items-->
+    <!-- Contenedor Principal -->
+    <nav class="navbar"> 
+        <div class="navbar-container">
+          <!-- Logo -->
+          <div class="navbar-logo">
+            <img src="images/logo-bookmark.png" alt="Bookmark Logo" id="logo">
+          </div>
+      
+          <!-- Menú Principal -->
+          <div class="navbar-links">
+            <a href="#features" class="navbar-link">Features</a>
+            <a href="#download" class="navbar-link">Download</a>
+            <a href="#faq" class="navbar-link">FAQ</a>
+            <a href="#" class="navbar-login">Login</a>
+          </div>
+      
+          <!-- Botón Hamburguesa -->
+          <button id="menu-btn" class="hamburger-button">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
         </div>
-        <div class="navLinks"><a href="#">FEATURES</a></div>
-        <div class="navLinks"><a href="#">PRICING</a></div>
-        <div class="navLinks"><a href="#">CONTACT</a></div>
-        <div class="navButton"><button class="buttonLogin">LOGIN</button></div>
-    </nav>
+      </nav>
 
     <!--Section Hero-->
     <section id="hero">
@@ -164,7 +179,7 @@
           <!-- Caja 1 -->
           <div class="caja">
             <div class="caja-imagen">
-              <img src="images/logo-chrome.svg" alt="">
+              <img src="images/logo-chrome.png" alt="" class="logo-img">
             </div>
             <h5 class="titulo-caja">Add to Chrome</h5>
             <p class="texto-version">Minimum Version 62</p>
@@ -176,7 +191,7 @@
           <!-- Caja 2 -->
           <div class="caja caja-con-margen-medio">
             <div class="caja-imagen">
-              <img src="images/logo-firefox.svg" alt="">
+              <img src="images/logo-firefox.png" alt="" class="logo-img">
             </div>
             <h5 class="titulo-caja">Add to Firefox</h5>
             <p class="texto-version">Minimum Version 55</p>
@@ -188,7 +203,7 @@
           <!-- Caja 3 -->
           <div class="caja caja-con-margen-grande">
             <div class="caja-imagen">
-              <img src="images/logo-opera.svg" alt="">
+              <img src="images/logo-opera.png" alt="" class="logo-img">
             </div>
             <h5 class="titulo-caja">Add to Opera</h5>
             <p class="texto-version">Minimum Version 46</p>
@@ -200,6 +215,148 @@
         </div>
       </section>
       
+      <!--FAQ Heading-->
+      <section if="faq">
+        <div class="contenedor-faq">
+            <h2 class="titulo-faq">
+            Frequently Asked Questions
+            </h2>
+            <p class="descripcion-faq">
+            Here are some of our FAQs. If you have any other questions you'd like
+            answered please feel free to email us.
+            </p>
+        </div>      
+    </section>
 
+    <!--FAQ Acordion-->
+    <section id="faq-accordion">
+        <div class="faq-container">
+          <div class="accordion-wrapper">
+      
+            <!-- Accordion Item 1 -->
+            <article class="accordion-item" tabindex="1">
+              <header class="accordion-header">
+                <h3 class="accordion-title">What is Bookmark?</h3>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                    <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"></path>
+                  </svg>
+                </span>
+              </header>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                  repellat amet doloribus consequuntur eos similique provident tempora
+                  voluptates iure quia fuga dicta voluptatibus culpa mollitia recusandae
+                  delectus id suscipit labore?
+                </p>
+              </div>
+            </article>
+      
+            <!-- Accordion Item 2 -->
+            <article class="accordion-item" tabindex="2">
+              <header class="accordion-header">
+                <h3 class="accordion-title">How can I request a new browser?</h3>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                    <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"></path>
+                  </svg>
+                </span>
+              </header>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                  repellat amet doloribus consequuntur eos similique provident tempora
+                  voluptates iure quia fuga dicta voluptatibus culpa mollitia recusandae
+                  delectus id suscipit labore?
+                </p>
+              </div>
+            </article>
+      
+            <!-- Accordion Item 3 -->
+            <article class="accordion-item" tabindex="3">
+              <header class="accordion-header">
+                <h3 class="accordion-title">Is there a mobile app?</h3>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                    <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"></path>
+                  </svg>
+                </span>
+              </header>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                  repellat amet doloribus consequuntur eos similique provident tempora
+                  voluptates iure quia fuga dicta voluptatibus culpa mollitia recusandae
+                  delectus id suscipit labore?
+                </p>
+              </div>
+            </article>
+      
+            <!-- Accordion Item 4 -->
+            <article class="accordion-item" tabindex="4">
+              <header class="accordion-header">
+                <h3 class="accordion-title">What about other Chromium browsers?</h3>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                    <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"></path>
+                  </svg>
+                </span>
+              </header>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                  repellat amet doloribus consequuntur eos similique provident tempora
+                  voluptates iure quia fuga dicta voluptatibus culpa mollitia recusandae
+                  delectus id suscipit labore?
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>  
+      
+      <!--Newsletter Section-->
+      <section id="newsletter" class="newsletter-section">
+        <div class="newsletter-container">
+          <p class="newsletter-subtitle">
+            35,000+ Already Joined
+          </p>
+          <h2 class="newsletter-heading">
+            Stay up-to-date with what we're doing
+          </h2>
+      
+          <!-- Form -->
+          <form class="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="text" class="newsletter-input" placeholder="Enter your email address">
+              <input type="submit" class="newsletter-button" value="Contact Us">
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!--Footer-->
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Navigation -->
+          <div class="footer-nav">
+            <img src="images/logo-bookmark-footer.png" alt="Bookmark logo" class="footer-logo">
+            <a href="#features" class="footer-link">Features</a>
+            <a href="#download" class="footer-link">Download</a>
+            <a href="#faq" class="footer-link">FAQ</a>
+          </div>
+      
+          <!-- Social Media Links -->
+          <div class="footer-social">
+            <a href="#">
+              <img src="images/logo-facebook-footer.png" alt="Facebook icon" class="footer-icon">
+            </a>
+            <a href="#">
+              <img src="images/logo-twitter-footer.png" alt="Twitter icon" class="footer-icon">
+            </a>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
