@@ -13,8 +13,6 @@ Three versions: Vanilla.
 
 ## Requirements
 
-- Google Chrome Versión 135.0.7049.115 (Build oficial) (64 bits)
-
 ## Documentation
 
 ### Installation
