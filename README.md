@@ -4,7 +4,7 @@
 
 Tasca 1.2. A Landing Page.
 
-Three versions: Vanilla.
+One version: Vanilla.
 
 ## Technologies
 
