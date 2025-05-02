@@ -1,9 +1,15 @@
+/* Evita la barra de desplazamiento horizontal en todo el sitio */
+.no-horizontal-scroll {
+  overflow-x: hidden;
+}
+
+/*
 ::before,
 ::after {
-  box-sizing: border-box; /*include the padding and border in an element's total width and height*/
+  box-sizing: border-box; /*include the padding and border in an element's total width and height
   border-width: 0;
   border-style: solid;
-}
+}*/
 
 /* Estilos del body */
 body {
@@ -15,10 +21,10 @@ body {
 
 /* Flex container For Nav Items */
 .navbar { /* Contenedor Principal */
-  position: relative;
-  padding: 1.5rem;
-  max-width: 1280px;
-  margin: 0 auto;
+  position: relative;/*se ajustará con respecto a su posición normal*/
+  padding: 1.5rem; /*=24px; 1 rem = 16 px*; 24/16=1.5rem*/
+  max-width: 1280px;/*El valor de la propiedad max-width anula la propiedad width.*/
+  margin: 0 auto;/*top-down = 0*/ 
 }
 
 .navbar-container {
@@ -32,10 +38,11 @@ body {
 /* Logo */
 .navbar-logo {
   z-index: 30;
+  padding: 1rem;
 }
 
 #logo {
-  max-height: 25px;
+  max-height: 30px;
   width: 148px;
 }
 
@@ -58,7 +65,7 @@ body {
   color: hsl(0, 94%, 66%);
 }
 
-.navbar-login {
+.navbar-login { /*botón LOGIN*/
   padding: 0.5rem 2rem;
   background-color: hsl(0, 94%, 66%);
   color: white;

@@ -7,13 +7,15 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<!--https://tailwindfromscratch.com/website-projects/bookmark/index.html-->
 
-<body>
+<body class="no-horizontal-scroll">
+
     <!--Flex container For Nav Items-->
-    <!-- Contenedor Principal -->
-    <nav class="navbar"> 
+    <nav class="navbar">
+      
+        <!--Contenedor Principal-->
         <div class="navbar-container">
+
           <!-- Logo -->
           <div class="navbar-logo">
             <img src="images/logo-bookmark.png" alt="Bookmark Logo" id="logo">
@@ -27,8 +29,8 @@
             <a href="#" class="navbar-login">Login</a>
           </div>
       
-          <!-- Botón Hamburguesa -->
-          <button id="menu-btn" class="hamburger-button">
+          <!-- Botón Hamburguesa: menú de navegación para móviles-->
+          <button id="menu-btn" class="hamburger-button"> 
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -54,8 +56,8 @@
             <!--Image-->
             <div class="column-2">
                 <div class="superpuestas">
-                    <img src="imagen-fondo2.jpg" class="imagen-fondo" alt="Imagen de fondo">
-                    <img src="illustration-hero.svg" class="imagen-frontal" alt="Imagen frontal">
+                    <img src="images/imagen-fondo2.jpg" class="imagen-fondo" alt="Imagen de fondo">
+                    <img src="images/illustration-hero.svg" class="imagen-frontal" alt="Imagen frontal">
                 </div>
             </div>
         </div>
@@ -140,8 +142,8 @@
                 <!-- Panel 3 -->
                 <div class="panel panel-3">
                     <div class="panel-image">
-                        <img src="imagen-fondo3.jpg" class="imagen-fondo3" alt="Imagen de fondo">
-                        <img src="pantalla2.jpg" class="imagen-frontal3" alt="">
+                        <img src="images/imagen-fondo3.jpg" class="imagen-fondo3" alt="Imagen de fondo">
+                        <img src="images/pantalla2.jpg" class="imagen-frontal3" alt="">
                     </div>
                     <div class="panel-content">
                         <h3 class="panel-heading">Share your bookmarks</h3>
@@ -216,7 +218,7 @@
       </section>
       
       <!--FAQ Heading-->
-      <section if="faq">
+      <section id="faq">
         <div class="contenedor-faq">
             <h2 class="titulo-faq">
             Frequently Asked Questions
