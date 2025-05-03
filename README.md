@@ -61,8 +61,8 @@ You can customize the text, images, and colors directly in the HTML and CSS to s
 
 ## Technologies used 
 
-• HTML5 (semantic structure)
-• CSS3 (responsive design, flexbox)
+- HTML5 (semantic structure)
+- CSS3 (responsive design, flexbox)
 
 ## Screenshots
 Pending to do...
