@@ -1,71 +1,64 @@
-/* Evita la barra de desplazamiento horizontal en todo el sitio */
-.no-horizontal-scroll {
-  overflow-x: hidden;
-}
-
-/*
-::before,
-::after {
-  box-sizing: border-box; /*include the padding and border in an element's total width and height
-  border-width: 0;
-  border-style: solid;
-}*/
-
-/* Estilos del body */
-body {
-  background-color: white;
-  font-family: 'Arial', sans-serif; /* Puedes cambiar a la que quieras */
-  margin: 0; /*margen de toda la página 0px*/
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; /*include the padding and border in an element's total width and height*/
 }
 
-/* Flex container For Nav Items */
+/* BODY */
+.no-horizontal-scroll {
+  overflow-x: hidden; /* Evita la barra de desplazamiento horizontal en todo el sitio */
+}
+
+body { /* Estilos del body */
+  background-color: white;
+  font-family: 'Arial', sans-serif; 
+}
+
+/* NAV ITEMS */
 .navbar { /* Contenedor Principal */
-  position: relative;/*se ajustará con respecto a su posición normal*/
-  padding: 1.5rem; /*=24px; 1 rem = 16 px*; 24/16=1.5rem*/
-  max-width: 1280px;/*El valor de la propiedad max-width anula la propiedad width.*/
+  padding: 1.5rem; /*=24px; 1 rem = 16 px**/
+  max-width: 1440px;/*max-width anula la propiedad width (pantalla xl: max-width: 1280px)*/
   margin: 0 auto;/*top-down = 0*/ 
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
+  justify-content: space-between; /*El espacio entre las líneas flexibles es igual, pero el primer elemento está alineado con el borde inicial del contenedor, 
+  y el último elemento está alineado con el borde final del contenedor:</p>*/
   margin: 1.5rem 0;
 }
 
-/* Logo */
-.navbar-logo {
-  z-index: 30;
-  padding: 1rem;
-}
-
-#logo {
+/* Logo Bookmark */
+#logo { 
   max-height: 30px;
   width: 148px;
 }
 
-/* Enlaces de Navegación */
+/* Bar Menu & Login */
 .navbar-links {
-  display: none;
-  gap: 2.5rem;
+  display: flex;
   text-transform: uppercase;
-  color: hsl(229, 8%, 60%);
+  color: grey;
   align-items: center;
+  margin: 0px 0px 0px 80px;
 }
 
+/* Bar Menu */
 .navbar-link {
   letter-spacing: 0.1em;
   transition: color 0.2s;
   color: grey;
+  margin: 0px 0px 0px 40px;
 }
 
 .navbar-link:hover {
   color: hsl(0, 94%, 66%);
 }
 
-.navbar-login { /*botón LOGIN*/
+/* Login Button*/
+.navbar-login { 
   padding: 0.5rem 2rem;
   background-color: hsl(0, 94%, 66%);
   color: white;
@@ -73,6 +66,7 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
+  margin: 0px 0px 0px 40px;
 }
 
 .navbar-login:hover {
@@ -80,71 +74,13 @@ body {
   color: hsl(0, 94%, 66%);
 }
 
-/* Botón Hamburguesa */
-.hamburger-button {
-  z-index: 30;
-  display: block;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger-line {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 5px 0;
-  transition: 0.3s;
-}
-
-/* Menú Móvil */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 20;
-  flex-direction: column;
-  align-items: center;
-  padding: 6rem 1.5rem 1rem;
-  background-color: hsl(229, 31%, 21%);
-  opacity: 0.9;
-  text-transform: uppercase;
-  color: white;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  gap: 1rem;
-}
-
-.mobile-link {
-  text-align: center;
-  padding: 1rem;
-  display: block;
-  width: 100%;
-  border-top: 1px solid hsl(229, 8%, 60%);
-  transition: color 0.2s;
-}
-
-.mobile-link:hover {
-  color: hsl(0, 94%, 66%);
-}
-
-/* Mostrar menú y enlaces en pantallas grandes */
-@media (min-width: 768px) {
-  .navbar-links {
-    display: flex;
-  }
-  .hamburger-button {
-    display: none;
-  }
-}
-
-a { /*quitamos todos los underline de los enlaces*/
+a { /* We removed all underlines from the menu links. */ 
   text-decoration: none;
 }
 
 /* Central container for flexboxes: 2 columns */
 .contenedor-central {
-  max-width: 1280px;   
+  max-width: 1440px;   
   display: flex;
   margin-left: auto; /*The browser calculates a left margin*/
   margin-right: auto;
@@ -210,7 +146,7 @@ a { /*quitamos todos los underline de los enlaces*/
 
 /*columna 2*/
 .superpuestas { 
-  position: relative;
+  position: relative;/*se ajustará con respecto a su posición normal*/
   width: 100%; /* ajusto si quiero limitar el tamaño */
   /*height: 400px;*/ 
   justify-content: center;
@@ -239,7 +175,7 @@ a { /*quitamos todos los underline de los enlaces*/
   margin: 4rem auto; /* 4rem:margen arriba; auto:centra horizontalmente el elemento dentro de su contenedor.*/
   padding-left: 1.5rem; /*La unidad em es relativa al tamaño de fuente del elemento (2em significa el doble del tamaño de la fuente actual).*/
   padding-right: 1.5rem;
-  max-width: 1280px;
+  max-width: 1440px;
 }
 
 .features-title {
@@ -258,11 +194,11 @@ a { /*quitamos todos los underline de los enlaces*/
 
 /*Features tabs*/
 /* Contenedor principal */
-.container {
+.container-tabs {
   position: relative;
   margin: 6rem auto 8rem auto; /* arriba - derecha - abajo - izquierda */
   padding: 0 1.5rem;
-  max-width: 1280px;
+  max-width: 1440px;
 }
 
 /* Fondo detrás de tabs */
@@ -478,160 +414,148 @@ a { /*quitamos todos los underline de los enlaces*/
   color: gris;       
 }
 
-/*Download Boxes*/
-#download-boxes {
-  padding-top: 8rem;   /* 128px arriba */
-  padding-bottom: 8rem;
+/*Download Heading*/
+.download-section-heading {
+  background-color: #ffffff;
 }
 
-.contenedor-cajas {
-  position: relative;
+.container-heading {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+.section-description {
+  color: #9194a1; /* similar a text-grayishBlue */
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/*Download Boxes*/
+/* Variables */
+:root {
+  --soft-blue: #5368df;
+  --gray: #9CA3AF;
+  --bg-dots: url('images/bg-dots.svg'); /* Asegúrate de que exista esta imagen */
+}
+
+/* Sección de descarga */
+.download-section {
+  padding: 8rem 1rem;
+  background-color: #fff;
+}
+
+/* Contenedor flexible */
+.download-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1280px;    /*max-width: 80rem; max-w-5xl = 1280px */
-  margin-left: 250px;
-  margin-right: 250px;
-  padding-left: 2.5rem; /* 40px */
-  padding-right: 2.5rem;
-  gap: 2.5rem;          /* espacio entre cajas verticalmente */
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* En pantallas medianas (>= 768px) */
 @media (min-width: 768px) {
-  .contenedor-cajas {
+  .download-container {
     flex-direction: row;
-    gap: 1.75rem;       /* md:space-x-7 = 28px entre cajas horizontalmente */
-    padding-left: 1.5rem; /* md:px-6 = 24px */
-    padding-right: 1.5rem;
+    justify-content: space-between;
+    gap: 1.75rem;
   }
 }
 
-.caja {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-top: 1.5rem;  /* py-6 = 24px */
-  padding-bottom: 1.5rem;
+/* Caja de descarga */
+.download-box {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-radius: 0.5rem; /* rounded-lg = 8px */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* sombra suave */
-  gap: 1rem;
-}
-
-/* Para añadir márgenes adicionales a la segunda y tercera caja en escritorio */
-@media (min-width: 768px) {
-  .caja {
-    width: 33.333%; /* md:w-1/3 */
-  }
-  .caja-con-margen-medio {
-    margin-top: 2rem;   /* md:mt-8 = 32px */
-  }
-  .caja-con-margen-grande {
-    margin-top: 4rem;   /* md:mt-16 = 64px */
-  }
-}
-
-.caja-imagen {
-  display: flex;
-  justify-content: center;
-}
-
-.logo-img { /*para que la imagen se ajuste a su caja*/
-  max-width: 100px; /* o el tamaño que necesites */
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.titulo-caja {
-  padding-top: 1.5rem;  /* pt-6 */
-  font-size: 1.25rem;   /* text-xl = 20px */
-  font-weight: 700;     /* font-bold */
-}
-
-.texto-version {
-  color: #9095a7; /* similar a text-gray-400 */
-}
-
-.caja-dots {
-  background-image: url('images/dots_image.jpeg'); /* debes poner aquí la imagen de puntos path/to/dots-image.jpeg*/
-  background-repeat: repeat-x;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  text-transform: capitalize;
-  background-size: 200px;
-}
-
-.boton-caja {
-  display: block;
   width: 100%;
-  padding-top: 0.75rem; /* py-3 = 12px arriba/abajo */
-  padding-bottom: 0.75rem;
-  background-color: #5267df; /* bg-softBlue */
+  max-width: 330px;
+}
+
+/* Caja desplazada para simular efecto escalonado */
+.delayed {
+  margin-top: 2rem;
+}
+.delayed-more {
+  margin-top: 4rem;
+}
+
+/* Logo */
+.download-logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Título y versión */
+.download-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.download-version {
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+/* Footer con fondo de puntos */
+.download-footer {
+  background-image: url('images/dots_image.jpeg'); /* imagen de puntos */
+  background-repeat: repeat-x;
+  background-size: 200px;
+  padding-top: 1.5rem;
+  padding-inline: 1.5rem;
+}
+
+/* Botón */
+.download-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
   color: white;
-  border: 2px solid #5267df;
+  background-color: var(--soft-blue);
+  border: 2px solid var(--soft-blue);
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.2s ease;
-  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* Hover en el botón */
-.boton-caja:hover {
+.download-btn:hover {
   background-color: white;
-  color: #5267df;
-  border: 2px solid #5267df;
+  color: var(--soft-blue);
 }
 
-/*FAQ Heading*/
+
+/*FAQ HEADING*/
 .contenedor-faq {
   width: 100%;
+  max-width: 1440px;    /* para pantallas grandes */
   margin-left: auto;
   margin-right: auto;
-  max-width: 1280px;    /* para pantallas grandes */
   text-align: center;
-}
-
-/* Responsive: ajuste de max-width según pantalla */
-@media (min-width: 640px) {
-  .contenedor-faq {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-  .contenedor-faq {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-  .contenedor-faq {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-  .contenedor-faq {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-  .contenedor-faq {
-    max-width: 1536px;
-  }
 }
 
 .titulo-faq {
   margin-bottom: 1.5rem;    /* =24px 1.5rem */
   font-size: 1.875rem;      /* = 30px */
   font-weight: 600;         /* font-semibold */
-}
-
-@media (min-width: 768px) {
-  .titulo-faq {
-    font-size: 2.25rem;     /* md:text-4xl = 36px */
-  }
+  max-width: 1440px;
 }
 
 .descripcion-faq {
@@ -646,7 +570,7 @@ a { /*quitamos todos los underline de los enlaces*/
 
 /*FAQ Acordion*/
 .faq-container {
-  max-width: 1280px;
+  max-width: 1440px;
   padding: 0 1.5rem;
   margin: 0 auto 8rem;
 }

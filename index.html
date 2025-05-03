@@ -10,7 +10,7 @@
 
 <body class="no-horizontal-scroll">
 
-    <!--Flex container For Nav Items-->
+    <!--Nav Items-->
     <nav class="navbar">
       
         <!--Contenedor Principal-->
@@ -21,24 +21,17 @@
             <img src="images/logo-bookmark.png" alt="Bookmark Logo" id="logo">
           </div>
       
-          <!-- Menú Principal -->
-          <div class="navbar-links">
+          <!-- Menú Principal y Login -->
+          <div class="navbar-links">  
             <a href="#features" class="navbar-link">Features</a>
             <a href="#download" class="navbar-link">Download</a>
             <a href="#faq" class="navbar-link">FAQ</a>
             <a href="#" class="navbar-login">Login</a>
           </div>
-      
-          <!-- Botón Hamburguesa: menú de navegación para móviles-->
-          <button id="menu-btn" class="hamburger-button"> 
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </nav>
+        </div>  
+    </nav>
 
-    <!--Section Hero-->
+    <!--Section Hero: banner-->
     <section id="hero">
         <!--Container for image and content-->
         <div class="contenedor-central">
@@ -63,7 +56,7 @@
         </div>
     </section>
 
-    <!-- Features Heading -->
+    <!-- Section Features Heading -->
     <section id="features">
         <div class="features-container">
             <h2 class="features-title">Features</h2>
@@ -78,7 +71,7 @@
 
     <!-- Features tabs -->
     <section id="tabs">
-        <div class="container">
+        <div class="container-tabs">
             <div class="background-tabs"></div>
 
             <div class="tabs-container">
@@ -161,71 +154,67 @@
         </div>
     </section>
 
-    <!--Dowload Heading-->
-    <section id="download">
-        <div class="contenedor">
-          <h2 class="titulo-principal">
-            Download the extension
-          </h2>
-          <p class="parrafo-principal">
-            We've got more browsers in the pipeline. Please do let us know if
-            you've got a favourite you'd like us to prioritize.
-          </p>
+    <!--Section DOWNLOAD HEADING-->
+    <section id="download" class="download-section-heading">
+      <div class="container-heading">
+        <h2 class="section-title">Download the extension</h2>
+        <p class="section-description">
+          We've got more browsers in the pipeline. Please let us know if you've got a favourite you'd like us to prioritize.
+        </p>
+      </div>
+    </section>  
+
+    <!--DOWNLOADS BOXES-->
+    <section id="download-boxes" class="download-section">
+      <div class="download-container">
+
+        <!-- Chrome -->
+        <div class="download-box">
+          <div class="download-logo">
+            <img src="images/logo-chrome.png" alt="Logo de Chrome">
+          </div>
+          <h5 class="download-title">Add to Chrome</h5>
+          <p class="download-version">Minimum Version 62</p>
+          <div class="download-footer">
+            <a href="#" class="download-btn">Add & Install Extension</a>
+          </div>
         </div>
-      </section>
-      
-    <!--Download Boxes-->  
-    <section id="download-boxes">
-        <div class="contenedor-cajas">
-          
-          <!-- Caja 1 -->
-          <div class="caja">
-            <div class="caja-imagen">
-              <img src="images/logo-chrome.png" alt="" class="logo-img">
-            </div>
-            <h5 class="titulo-caja">Add to Chrome</h5>
-            <p class="texto-version">Minimum Version 62</p>
-            <div class="caja-dots">
-              <a href="#" class="boton-caja">Add & Install Extension</a>
-            </div>
+    
+        <!-- Firefox -->
+        <div class="download-box delayed">
+          <div class="download-logo">
+            <img src="images/logo-firefox.png" alt="Logo de Firefox">
           </div>
-      
-          <!-- Caja 2 -->
-          <div class="caja caja-con-margen-medio">
-            <div class="caja-imagen">
-              <img src="images/logo-firefox.png" alt="" class="logo-img">
-            </div>
-            <h5 class="titulo-caja">Add to Firefox</h5>
-            <p class="texto-version">Minimum Version 55</p>
-            <div class="caja-dots">
-              <a href="#" class="boton-caja">Add & Install Extension</a>
-            </div>
+          <h5 class="download-title">Add to Firefox</h5>
+          <p class="download-version">Minimum Version 55</p>
+          <div class="download-footer">
+            <a href="#" class="download-btn">Add & Install Extension</a>
           </div>
-      
-          <!-- Caja 3 -->
-          <div class="caja caja-con-margen-grande">
-            <div class="caja-imagen">
-              <img src="images/logo-opera.png" alt="" class="logo-img">
-            </div>
-            <h5 class="titulo-caja">Add to Opera</h5>
-            <p class="texto-version">Minimum Version 46</p>
-            <div class="caja-dots">
-              <a href="#" class="boton-caja">Add & Install Extension</a>
-            </div>
-          </div>
-      
         </div>
-      </section>
-      
-      <!--FAQ Heading-->
-      <section id="faq">
+    
+        <!-- Opera -->
+        <div class="download-box delayed-more">
+          <div class="download-logo">
+            <img src="images/logo-opera.png" alt="Logo de Opera">
+          </div>
+          <h5 class="download-title">Add to Opera</h5>
+          <p class="download-version">Minimum Version 46</p>
+          <div class="download-footer">
+            <a href="#" class="download-btn">Add & Install Extension</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--Section FAQ Heading-->
+    <section id="faq">
         <div class="contenedor-faq">
             <h2 class="titulo-faq">
-            Frequently Asked Questions
+              Frequently Asked Questions
             </h2>
             <p class="descripcion-faq">
-            Here are some of our FAQs. If you have any other questions you'd like
-            answered please feel free to email us.
+              Here are some of our FAQs. If you have any other questions you'd like
+              answered please feel free to email us.
             </p>
         </div>      
     </section>
