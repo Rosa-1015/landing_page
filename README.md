@@ -8,7 +8,7 @@
   
 - [Installation](#installation)
   
-- [Usage](#use)
+- [Usage](#usage)
   
 - [Technologies Used](#technologies-used)
   
@@ -55,14 +55,14 @@ Right-click on index.html → "Open with Live Server"
 
 ## Usage 
 
-<img src="images/icons/list.png" width="40" height="40"> This project serves as a starting point for creating your own homepage.
+<img src="images/icons/list.png" width="40" height="40"> This project serves as a starting point for creating your own homepage. 
 
 You can customize the text, images, and colors directly in the HTML and CSS to suit your purpose (product, course, service, etc.).
 
 ## Technologies used 
 
-• HTML5 (semantic structure)
-• CSS3 (responsive design, flexbox)
+- HTML5 (semantic structure)
+- CSS3 (responsive design, flexbox)
 
 ## Screenshots
 Pending to do...
