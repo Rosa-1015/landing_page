@@ -78,11 +78,11 @@ a { /* We removed all underlines from the menu links. */
   text-decoration: none;
 }
 
-/* Central container for flexboxes: 2 columns */
+/* HERO: CENTRAL CONTAINER */
 .contenedor-central {
-  max-width: 1440px;   
   display: flex;
-  margin-left: auto; /*The browser calculates a left margin*/
+  max-width: 1440px;   
+  margin-left: auto; 
   margin-right: auto;
   padding: 1.5rem;
 }
@@ -94,6 +94,7 @@ a { /* We removed all underlines from the menu links. */
 .column-1 {
   display: flex;
   flex-direction: column;
+  margin: 64px 0px 0px;
 }
 
 /*columna 1: Browser Buttons*/
@@ -106,11 +107,14 @@ a { /* We removed all underlines from the menu links. */
   font-size: 25px;
   max-width: 28rem; /* Máximo ancho: 448px*/
   text-align: left; /* Texto centrado */
+  line-height: 1.5; /*line spacing*/
+  margin: 40px 0 0;
 }
 
 .buttons-container { 
   display: flex;
   gap: 10px; /*Establece espacio entre botones*/
+  margin: 40px 0 0;
 }
 
 .button {
@@ -146,93 +150,88 @@ a { /* We removed all underlines from the menu links. */
 
 /*columna 2*/
 .superpuestas { 
-  position: relative;/*se ajustará con respecto a su posición normal*/
+  position: relative; /*se ajustará con respecto a su posición normal*/
   width: 100%; /* ajusto si quiero limitar el tamaño */
-  /*height: 400px;*/ 
   justify-content: center;
 }
 
 .imagen-fondo {
   position: absolute;/*posición respecto a la relativa*/
-  top: 130px;        /* Desplazo hacia abajo */
-  left: 180px;       /* Desplazo hacia la derecha */
+  top: 200px;        /* Desplazo hacia abajo */
+  left: 300px;       /* Desplazo hacia la derecha 300px*/
   width: 70%;        /* Tamaño */
   z-index: 1;        /* orden de apilamiento: la cantidad menor queda detrás*/
-  opacity: 0.8;
   /*border: 2px solid red; borde rojo solo para pruebas */
 }
 
 .imagen-frontal {
-  position: relative;
+  position: relative; /*se ajustará con respecto a su posición normal*/
   z-index: 2;
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  /*margin: 0 auto;*/
   display: block;
 }
 
-/*Features Heading*/
+/*FEATURES HEADING*/
 .features-container {
-  margin: 4rem auto; /* 4rem:margen arriba; auto:centra horizontalmente el elemento dentro de su contenedor.*/
-  padding-left: 1.5rem; /*La unidad em es relativa al tamaño de fuente del elemento (2em significa el doble del tamaño de la fuente actual).*/
+  margin: 4rem auto 0; /* 4rem=top; auto:centra horizontalmente el elemento dentro de su contenedor; 0=down*/
+  padding-left: 1.5rem; /*1=16px; 1.5=24px*/
   padding-right: 1.5rem;
   max-width: 1440px;
+  line-height: 1.5;
 }
 
 .features-title {
   margin-bottom: 1.5rem; 
   font-size: 2.25rem; /* 2rem es el doble del tamaño de la fuente actual */
-  font-weight: 600; /* =font-semibold; 400 is the same as normal, and 700 is the same as bold*/
+  font-weight: 600; /* =font-semibold; 400=normal, 700=bold*/
   text-align: center;
 }
 
 .features-description {
-  max-width: 28rem; /* max-w-md ≈ 28rem en Tailwind */
+  max-width: 28rem;
   margin: 0 auto;
   text-align: center;
-  color: hsl(229, 8%, 60%); /* Aproximación de text-grayishBlue */
+  color: grey; 
 }
 
-/*Features tabs*/
+/*FEATURES TABS*/
 /* Contenedor principal */
 .container-tabs {
   position: relative;
-  margin: 6rem auto 8rem auto; /* arriba - derecha - abajo - izquierda */
+  margin: 3rem auto 8rem auto; /* arriba - derecha - abajo - izquierda */
   padding: 0 1.5rem;
   max-width: 1440px;
 }
 
-/* Fondo detrás de tabs */
+/* Fondo detrás de tabs: bala azul izq */
+/* para que la imagen vaya hasta el borde*/
+/*
 .background-tabs {
-  background: url('path/to/your/background.svg') no-repeat center center;
+  background: url('images/imagen-fondo3.jpg') no-repeat center center;
   background-size: cover;
 }
+*/
 
-/* Contenedor de las pestañas (tabs) */
+/* Tab container */
 .tabs-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #2b0bac; /*raya contínua base de todas las tabs*/
   margin-bottom: 1.5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 } 
 
-@media (min-width: 768px) {
-  .tabs-container {
-    flex-direction: row;
-    gap: 2.5rem; /* espacio entre tabs en desktop */
-  }
-}
-
-/* Estilo de cada tab */
+/* Style of each tab */
 .tab {
   display: flex;
   justify-content: center;
   text-align: center;
-  cursor: pointer;
-  color: #718096; /* text-gray-600 */
+  cursor: pointer;/*al pasar el ratón por el texto aparece una mano como puntero*/
+  color: rgb(77, 76, 76); 
   border-bottom: 1px solid #ccc;
   width: 100%;
 }
@@ -241,16 +240,9 @@ a { /* We removed all underlines from the menu links. */
   color: #f25f3a; /* hover soft red */
 }
 
-@media (min-width: 768px) {
-  .tab {
-    border-bottom: none;
-    width: 33.33%;
-  }
-}
-
 /* Título dentro del tab */
 .tab-title {
-  padding: 1.25rem 0;
+  padding: 1.25rem 0; /*20px*/
 }
 
 .tab-title.active {
@@ -266,103 +258,67 @@ a { /* We removed all underlines from the menu links. */
 .panel {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+  flex-direction: row;
 }
 
-@media (min-width: 768px) {
-  .panel {
-    flex-direction: row;
-    gap: 1.75rem;
-  }
-}
-
-/* Imagen del panel */
+/* Contenido del panel parte izquierda: Imagen del panel */
 .panel-image {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.imagen-frontal3 {
+.imagen-frontal3 { /*pantalla */
   position: relative;
   z-index: 2;
   width: 80%;
-  margin: 0 auto;
   display: block;
 }
 
 .imagen-fondo3 {
-  position: absolute;/*posición respecto a la relativa*/
-  top: 250px;        /* Desplazo hacia abajo */
-  left: 0px;       /* Desplazo hacia la derecha */
+  position: absolute;/* posición respecto a la relativa */
+  top: 270px;        /* Desplazo hacia abajo */
+  left: -100px;      /* Desplazo hacia la derecha */  
   width: 35%;        /* Tamaño */
-  z-index: 1;        /* orden de apilamiento: la cantidad menor queda detrás*/
-  opacity: 0.8;
+  z-index: 1;        /* orden de apilamiento: la cantidad menor queda detrás */  
   /*border: 2px solid red; borde rojo solo para pruebas */
 }
 
-@media (min-width: 768px) {
-  .panel-image {
-    width: 50%;
-  }
-}
-
-/* Contenido del panel */
+/* Contenido del panel parte derecha: Share your bookmarks */
 .panel-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .panel-content {
-    width: 50%;
-  }
+  margin: 0 0 0 28px;
 }
 
 /* Heading del panel */
 .panel-heading {
-  margin-top: 8rem;
+  margin-top: 0; 
   font-size: 1.875rem; /* 3xl */
   font-weight: 600;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .panel-heading {
-    margin-top: 0;
-    text-align: left;
-  }
+  text-align: left; 
 }
 
 /* Descripción */
 .panel-description {
-  max-width: 500px;
-  color: #9ca3af; /* text-grayishBlue */
-  text-align: center;
+  max-width: 448px;
+  color: grey; 
+  text-align: left; 
+  line-height: 1.5;
+  margin: 32px 0 0;
 }
 
-@media (min-width: 768px) {
-  .panel-description {
-    text-align: left;
-  }
-}
-
-/* Botón de más información */
+/* Button More Info */
 .button-container {
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .button-container {
-    margin-left: 0;
-  }
+  margin: 2rem 0 0;
+  margin-left: 0;
 }
 
 .panel-button {
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem; /*1/16=x/12*/
   margin-top: 1rem;
   font-weight: 600;
   color: #fff;
@@ -370,6 +326,9 @@ a { /* We removed all underlines from the menu links. */
   border: 2px solid #fff;
   border-radius: 0.5rem;
   text-decoration: none;
+  margin: 16px 0 0;
+  height: 52px;
+  width: 126px;
 }
 
 .panel-button:hover {
@@ -378,10 +337,11 @@ a { /* We removed all underlines from the menu links. */
   border: 2px solid #5368df;
 }
 
-/* Panel oculto */
+/*
+/* Panel oculto 
 .hidden {
   display: none;
-}
+}*/
 
 /*Download Heading*/
 .contenedor {
@@ -440,9 +400,10 @@ a { /* We removed all underlines from the menu links. */
 
 .section-description {
   color: #9194a1; /* similar a text-grayishBlue */
-  max-width: 600px;
+  max-width: 512px;
   margin: 0 auto;
   font-size: 1rem;
+  line-height: 1.5;
 }
 
 /*Download Boxes*/
@@ -455,7 +416,7 @@ a { /* We removed all underlines from the menu links. */
 
 /* Sección de descarga */
 .download-section {
-  padding: 8rem 1rem;
+  padding: 8rem 0;
   background-color: #fff;
 }
 
@@ -464,9 +425,9 @@ a { /* We removed all underlines from the menu links. */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -480,7 +441,7 @@ a { /* We removed all underlines from the menu links. */
 /* Caja de descarga */
 .download-box {
   background-color: #fff;
-  padding: 2rem 1rem;
+  padding: 1.5rem 0;
   border-radius: 0.75rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -565,7 +526,8 @@ a { /* We removed all underlines from the menu links. */
   padding-left: 1.5rem;     /* px-6 = 24px */
   padding-right: 1.5rem;
   font-size: 1rem;          /* base text */
-  color: #9095a7;           /* similar a text-grayishBlue */
+  color: #9095a7;         /* similar a text-grayishBlue */
+  line-height: 1.5;
 }
 
 /*FAQ Acordion*/
