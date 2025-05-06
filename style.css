@@ -1,32 +1,35 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*include the padding and border in an element's total width and height*/
+  box-sizing: border-box; 
 }
+
+:root { 
+  --soft-blue: #5368df;
+  --gray: #9CA3AF;
+ }
 
 /* BODY */
 .no-horizontal-scroll {
-  overflow-x: hidden; /* Evita la barra de desplazamiento horizontal en todo el sitio */
+  overflow-x: hidden;
 }
 
-body { /* Estilos del body */
+body { 
   background-color: white;
   font-family: 'Arial', sans-serif; 
 }
 
 /* NAV ITEMS */
-.navbar { /* Contenedor Principal */
-  padding: 1.5rem; /*=24px; 1 rem = 16 px**/
-  max-width: 1440px;/*max-width anula la propiedad width (pantalla xl: max-width: 1280px)*/
-  margin: 0 auto;/*top-down = 0*/ 
+.navbar { 
+  padding: 1.5rem; 
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /*El espacio entre las líneas flexibles es igual, pero el primer elemento está alineado con el borde inicial del contenedor, 
-  y el último elemento está alineado con el borde final del contenedor:</p>*/
+  justify-content: space-between; 
   margin: 1.5rem 0;
 }
 
@@ -74,12 +77,12 @@ body { /* Estilos del body */
   color: hsl(0, 94%, 66%);
 }
 
-a { /* We removed all underlines from the menu links. */ 
+a { 
   text-decoration: none;
 }
 
 /* HERO: CENTRAL CONTAINER */
-.contenedor-central {
+.central-container {
   display: flex;
   max-width: 1440px;   
   margin-left: auto; 
@@ -88,7 +91,7 @@ a { /* We removed all underlines from the menu links. */
 }
 
 .column-1, .column-2 { 
-  flex: 1;/*ambas columnas ocupan el mismo espacio disponible (50% del ancho cada una) independientemente de su contenido*/
+  flex: 1;
 }
 
 .column-1 {
@@ -97,23 +100,22 @@ a { /* We removed all underlines from the menu links. */
   margin: 64px 0px 0px;
 }
 
-/*columna 1: Browser Buttons*/
 #title {
   font-size: 60px;
 }
 
 #text { 
-  color: grey; /*color para textos descriptivos*/
+  color: grey; 
   font-size: 25px;
-  max-width: 28rem; /* Máximo ancho: 448px*/
-  text-align: left; /* Texto centrado */
-  line-height: 1.5; /*line spacing*/
+  max-width: 28rem; 
+  text-align: left; 
+  line-height: 1.5; 
   margin: 40px 0 0;
 }
 
 .buttons-container { 
   display: flex;
-  gap: 10px; /*Establece espacio entre botones*/
+  gap: 10px; 
   margin: 40px 0 0;
 }
 
@@ -148,24 +150,24 @@ a { /* We removed all underlines from the menu links. */
   color: grey;
 }
 
-/*columna 2*/
-.superpuestas { 
-  position: relative; /*se ajustará con respecto a su posición normal*/
-  width: 100%; /* ajusto si quiero limitar el tamaño */
+/*column 2*/
+.superimposed-images { 
+  position: relative; 
+  width: 100%; 
   justify-content: center;
 }
 
 .imagen-fondo {
-  position: absolute;/*posición respecto a la relativa*/
-  top: 200px;        /* Desplazo hacia abajo */
-  left: 300px;       /* Desplazo hacia la derecha 300px*/
-  width: 70%;        /* Tamaño */
-  z-index: 1;        /* orden de apilamiento: la cantidad menor queda detrás*/
-  /*border: 2px solid red; borde rojo solo para pruebas */
+  position: absolute;
+  top: 200px;        
+  left: 300px;      
+  width: 70%;        
+  z-index: 1;        
+  /*border: 2px solid red; red border for testing only*/
 }
 
 .imagen-frontal {
-  position: relative; /*se ajustará con respecto a su posición normal*/
+  position: relative; 
   z-index: 2;
   width: 90%;
   /*margin: 0 auto;*/
@@ -174,8 +176,8 @@ a { /* We removed all underlines from the menu links. */
 
 /*FEATURES HEADING*/
 .features-container {
-  margin: 4rem auto 0; /* 4rem=top; auto:centra horizontalmente el elemento dentro de su contenedor; 0=down*/
-  padding-left: 1.5rem; /*1=16px; 1.5=24px*/
+  margin: 4rem auto 0; 
+  padding-left: 1.5rem; 
   padding-right: 1.5rem;
   max-width: 1440px;
   line-height: 1.5;
@@ -183,8 +185,8 @@ a { /* We removed all underlines from the menu links. */
 
 .features-title {
   margin-bottom: 1.5rem; 
-  font-size: 2.25rem; /* 2rem es el doble del tamaño de la fuente actual */
-  font-weight: 600; /* =font-semibold; 400=normal, 700=bold*/
+  font-size: 2.25rem; 
+  font-weight: 600; 
   text-align: center;
 }
 
@@ -196,80 +198,63 @@ a { /* We removed all underlines from the menu links. */
 }
 
 /*FEATURES TABS*/
-/* Contenedor principal */
 .container-tabs {
   position: relative;
-  margin: 3rem auto 8rem auto; /* arriba - derecha - abajo - izquierda */
+  margin: 3rem auto 8rem auto; 
   padding: 0 1.5rem;
   max-width: 1440px;
 }
 
-/* Fondo detrás de tabs: bala azul izq */
-/* para que la imagen vaya hasta el borde*/
-/*
-.background-tabs {
-  background: url('images/imagen-fondo3.jpg') no-repeat center center;
-  background-size: cover;
-}
-*/
-
-/* Tab container */
 .tabs-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-bottom: 1px solid #2b0bac; /*raya contínua base de todas las tabs*/
+  border-bottom: 1px solid #2b0bac; 
   margin-bottom: 1.5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 } 
 
-/* Style of each tab */
 .tab {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;/*al pasar el ratón por el texto aparece una mano como puntero*/
+  justify-content: center; 
+  text-align: center; 
+  cursor: pointer;
   color: rgb(77, 76, 76); 
   border-bottom: 1px solid #ccc;
   width: 100%;
 }
 
 .tab:hover {
-  color: #f25f3a; /* hover soft red */
+  color: #f25f3a; 
 }
 
-/* Título dentro del tab */
 .tab-title {
-  padding: 1.25rem 0; /*20px*/
+  padding: 1.25rem 0; 
 }
 
-.tab-title.active {
-  border-bottom: 4px solid #f25f3a; /* rojo suave */
+.tab-title.active { 
+  border-bottom: 4px solid #f25f3a; 
 }
 
-/* Paneles */
 .panels-container {
   margin: 0 auto;
 }
 
-/* Cada panel */
 .panel {
   display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0;
   flex-direction: row;
+  padding: 1.5rem 0;
 }
 
-/* Contenido del panel parte izquierda: Imagen del panel */
 .panel-image {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.imagen-frontal3 { /*pantalla */
+.imagen-frontal3 { 
   position: relative;
   z-index: 2;
   width: 80%;
@@ -277,15 +262,14 @@ a { /* We removed all underlines from the menu links. */
 }
 
 .imagen-fondo3 {
-  position: absolute;/* posición respecto a la relativa */
-  top: 270px;        /* Desplazo hacia abajo */
-  left: -100px;      /* Desplazo hacia la derecha */  
-  width: 35%;        /* Tamaño */
-  z-index: 1;        /* orden de apilamiento: la cantidad menor queda detrás */  
-  /*border: 2px solid red; borde rojo solo para pruebas */
+  position: absolute;
+  top: 270px;        
+  left: -100px;      
+  width: 35%;        
+  z-index: 1;        
+  /*border: 2px solid red; red border for testing only */
 }
 
-/* Contenido del panel parte derecha: Share your bookmarks */
 .panel-content {
   display: flex;
   flex-direction: column;
@@ -293,15 +277,13 @@ a { /* We removed all underlines from the menu links. */
   margin: 0 0 0 28px;
 }
 
-/* Heading del panel */
 .panel-heading {
   margin-top: 0; 
-  font-size: 1.875rem; /* 3xl */
+  font-size: 1.875rem; 
   font-weight: 600;
   text-align: left; 
 }
 
-/* Descripción */
 .panel-description {
   max-width: 448px;
   color: grey; 
@@ -310,19 +292,17 @@ a { /* We removed all underlines from the menu links. */
   margin: 32px 0 0;
 }
 
-/* Button More Info */
 .button-container {
-  margin: 2rem 0 0;
-  margin-left: 0;
+  margin: 2rem 0 0; 
 }
 
-.panel-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem; /*1/16=x/12*/
+.panel-button { 
+  display: inline-block; 
+  padding: 0.75rem 1.5rem; 
   margin-top: 1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #5368df; /* soft blue */
+  background-color: #5368df; 
   border: 2px solid #fff;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -337,44 +317,7 @@ a { /* We removed all underlines from the menu links. */
   border: 2px solid #5368df;
 }
 
-/*
-/* Panel oculto 
-.hidden {
-  display: none;
-}*/
-
-/*Download Heading*/
-.contenedor {
-  max-width: 1280px;      /* container: max width estándar */
-  margin-left: auto;      /* Centrado horizontalmente */
-  margin-right: auto;
-  padding-left: 1.5rem;   /* 24px de padding lateral */
-  padding-right: 1.5rem;
-}
-
-.titulo-principal {
-  margin-bottom: 1.5rem;  /* = 24px */
-  font-size: 1.875rem;    /* = 30px */
-  font-weight: 600;       /* font-semibold */
-  text-align: center;     /* text-center */
-}
-
-/* En pantallas grandes (mínimo 768px) */
-@media (min-width: 768px) {
-  .titulo-principal {
-    font-size: 2.25rem;   /* text-4xl = 36px */
-  }
-}
-
-.parrafo-principal {
-  max-width: 32rem;       /* 512px */
-  margin-left: auto;      
-  margin-right: auto;
-  text-align: center;     /* text-center */
-  color: gris;       
-}
-
-/*Download Heading*/
+/*DOWNLOAD HEADING*/
 .download-section-heading {
   background-color: #ffffff;
 }
@@ -387,58 +330,36 @@ a { /* We removed all underlines from the menu links. */
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .section-title {
-    font-size: 2.5rem;
-  }
-}
-
 .section-description {
-  color: #9194a1; /* similar a text-grayishBlue */
+  color: grey; 
   max-width: 512px;
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/*Download Boxes*/
-/* Variables */
-:root {
-  --soft-blue: #5368df;
-  --gray: #9CA3AF;
-  --bg-dots: url('images/bg-dots.svg'); /* Asegúrate de que exista esta imagen */
-}
-
-/* Sección de descarga */
+/*DOWNLOADS BOXES*/
 .download-section {
   padding: 8rem 0;
   background-color: #fff;
 }
 
-/* Contenedor flexible */
 .download-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  gap: 1.75rem;
+  
 }
 
-@media (min-width: 768px) {
-  .download-container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1.75rem;
-  }
-}
-
-/* Caja de descarga */
 .download-box {
   background-color: #fff;
   padding: 1.5rem 0;
@@ -449,21 +370,19 @@ a { /* We removed all underlines from the menu links. */
   max-width: 330px;
 }
 
-/* Caja desplazada para simular efecto escalonado */
 .delayed {
   margin-top: 2rem;
 }
+
 .delayed-more {
   margin-top: 4rem;
 }
 
-/* Logo */
 .download-logo img {
   width: 100px;
   height: auto;
 }
 
-/* Título y versión */
 .download-title {
   font-size: 1.25rem;
   font-weight: bold;
@@ -472,19 +391,18 @@ a { /* We removed all underlines from the menu links. */
 
 .download-version {
   color: var(--gray);
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
-/* Footer con fondo de puntos */
 .download-footer {
-  background-image: url('images/dots_image.jpeg'); /* imagen de puntos */
+  background-image: url('images/dots_image.jpeg'); 
   background-repeat: repeat-x;
   background-size: 200px;
   padding-top: 1.5rem;
   padding-inline: 1.5rem;
+  margin: 1rem 0 0;
 }
 
-/* Botón */
 .download-btn {
   display: inline-block;
   width: 100%;
@@ -502,50 +420,47 @@ a { /* We removed all underlines from the menu links. */
   color: var(--soft-blue);
 }
 
-
 /*FAQ HEADING*/
-.contenedor-faq {
+.container-faq {
   width: 100%;
-  max-width: 1440px;    /* para pantallas grandes */
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1020px;    
   text-align: center;
+  margin: 0 auto;
 }
 
 .titulo-faq {
-  margin-bottom: 1.5rem;    /* =24px 1.5rem */
-  font-size: 1.875rem;      /* = 30px */
-  font-weight: 600;         /* font-semibold */
+  margin-bottom: 1.5rem;    
+  font-size: 1.875rem;      
+  font-weight: 600;         
   max-width: 1440px;
 }
 
-.descripcion-faq {
-  max-width: 32rem;         /* max-w-lg = 512px */
+.description-faq {
+  max-width: 32rem;         
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;     /* px-6 = 24px */
+  padding-left: 1.5rem;     
   padding-right: 1.5rem;
-  font-size: 1rem;          /* base text */
-  color: #9095a7;         /* similar a text-grayishBlue */
+  font-size: 1rem;          
+  color: black;         
   line-height: 1.5;
 }
 
-/*FAQ Acordion*/
+/*FAQ ACORDION*/
 .faq-container {
-  max-width: 1440px;
+  max-width: 1020px;
   padding: 0 1.5rem;
-  margin: 0 auto 8rem;
+  margin: 0 auto 8rem; 
 }
 
 .accordion-wrapper {
   max-width: 42rem;
   margin: 2rem auto;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .accordion-item {
   border-bottom: 1px solid #e2e8f0;
-  outline: none;
   cursor: pointer;
   padding: 0.25rem 0;
 }
@@ -559,7 +474,7 @@ a { /* We removed all underlines from the menu links. */
   transition: color 0.5s ease;
 }
 
-.accordion-item:focus .accordion-icon {
+.accordion-item:focus .accordion-icon { 
   transform: rotate(-180deg);
   color: #ef4444;
 }
@@ -578,7 +493,7 @@ a { /* We removed all underlines from the menu links. */
 
 .accordion-content {
   max-height: 0;
-  overflow: hidden;
+  overflow: hidden; 
   transition: max-height 0.5s ease;
   color: #9ca3af;
   text-align: justify;
@@ -591,21 +506,21 @@ a { /* We removed all underlines from the menu links. */
   padding-bottom: 0.5rem;
 }
 
-/*Newsletter Section*/
+/*NEWSLETTER SECTION*/
 .newsletter-section {
-  background-color: #5267DF; /* Tailwind's softBlue */
+  background-color: #5267DF; 
 }
 
 .newsletter-container {
-  max-width: 32rem; /* max-w-lg */
+  max-width: 32rem; 
   margin: 0 auto;
-  padding: 6rem 1rem; /* py-24 px-4 */
+  padding: 6rem 1rem; 
 }
 
 .newsletter-subtitle {
   margin-bottom: 1.5rem;
-  font-size: 1.125rem; /* text-lg */
-  letter-spacing: 0.1em; /* tracking-widest */
+  font-size: 1.125rem; 
+  letter-spacing: 0.1em; 
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -614,76 +529,52 @@ a { /* We removed all underlines from the menu links. */
 .newsletter-heading {
   margin-bottom: 1.5rem;
   padding: 0 0.75rem;
-  font-size: 1.875rem; /* text-3xl */
+  font-size: 2.25rem;
   font-weight: 600;
   text-align: center;
   color: white;
 }
 
-@media (min-width: 768px) {
-  .newsletter-heading {
-    font-size: 2.25rem; /* text-4xl */
-  }
-}
-
 .newsletter-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: start;
   justify-content: center;
-  max-width: 42rem; /* max-w-2xl */
+  max-width: 512px; 
   margin: 0 auto;
   gap: 1.5rem;
   font-size: 1rem;
   padding: 0 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .newsletter-form {
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0;
-  }
-}
-
 .newsletter-input-group {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .newsletter-input-group {
-    flex-direction: row;
-    margin: 0;
-  }
+  margin: 0;
 }
 
 .newsletter-input {
   flex: 1;
+  max-width: 244px; 
   padding: 0.75rem 1.5rem 0.5rem;
-  margin-bottom: 1rem;
+  margin-right: 0.75rem;
   border: 1px solid white;
   border-radius: 0.5rem;
   outline: none;
-}
-
-@media (min-width: 768px) {
-  .newsletter-input {
-    margin-right: 0.75rem;
-    margin-bottom: 0;
-  }
+  font-size: 1rem;
 }
 
 .newsletter-button {
   display: inline-flex;
   padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   color: white;
-  background-color: #FA5959; /* Tailwind's softRed */
+  background-color: #FA5959; 
   border-radius: 0.5rem;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
@@ -694,47 +585,31 @@ a { /* We removed all underlines from the menu links. */
   opacity: 0.9;
 }
 
-/*Footer*/
+/*FOOTER*/
 .footer {
-  background-color: hsl(229, 31%, 21%); /* bg-veryDarkBlue */
-  padding: 4rem 0; /* py-16 */
+  background-color: hsl(229, 31%, 21%); 
+  padding: 4rem 0; 
 }
 
-/* Container Layout */
 .footer-container {
-  max-width: 1280px; /* container */
-  margin: 0 auto; /* mx-auto */
-  padding: 0 1.5rem; /* px-6 */
+  max-width: 1280px; 
+  margin: 0 auto; 
+  padding: 0 1.5rem; 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem; /* space-y-16 */
+  gap: 4rem; 
 }
 
-@media (min-width: 768px) {
-  .footer-container {
-    flex-direction: row;
-    gap: 0;
-  }
-}
-
-/* Navigation Section */
 .footer-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 2rem; /* space-y-8 */
-  font-size: 1.125rem; /* text-lg */
-  font-weight: 300; /* font-light */
-  color: hsl(229, 8%, 60%); /* text-grayishBlue */
-}
-
-@media (min-width: 768px) {
-  .footer-nav {
-    flex-direction: row;
-    gap: 3.5rem; /* space-x-14 */
-  }
+  gap: 2rem; 
+  font-size: 1.125rem; 
+  font-weight: 300; 
+  color: hsl(229, 8%, 60%); 
 }
 
 .footer-link {
@@ -744,7 +619,7 @@ a { /* We removed all underlines from the menu links. */
 }
 
 .footer-link:hover {
-  color: hsl(0, 94%, 66%); /* hover:text-softRed */
+  color: hsl(0, 94%, 66%); 
 }
 
 .footer-logo {
@@ -752,12 +627,12 @@ a { /* We removed all underlines from the menu links. */
   max-height: 40px;
 }
 
-/* Social Icons */
+
 .footer-social {
   display: flex;
-  gap: 2.5rem; /* space-x-10 */
+  gap: 2.5rem; 
 }
 
 .footer-icon {
-  height: 1.5rem; /* h-6 */
+  height: 1.5rem; 
 }
