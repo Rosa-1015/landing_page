@@ -23,7 +23,7 @@ A simple landing page created with only HTML and CSS, without frameworks or Java
 ## Project Structure 
 
 📦️1_LANDING_PAGE
-┣ 📂src
+┣ 📂assets
 ┃ ┗ 📂images
 ┃   ┗ 📂icons
 ┣ 📂styles
