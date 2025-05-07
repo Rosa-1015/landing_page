@@ -16,16 +16,17 @@
 
 ## Description
 
-Sprint 1.2. A Landing Page.
+Sprint 1.1. HTML i CSS amb Flex
 
 A simple landing page created with only HTML and CSS, without frameworks or JavaScript. Ideal as a basic example for practicing static web design. It's part of a web development sprint designed to practice semantic structure, custom styles, and clean design.
 
 ## Project Structure 
 
 📦️1_LANDING_PAGE
-┣ 📂images
-┃ ┗ 📂icons
-┣ 📄 styles.css
+┣ 📂src
+┃ ┗ 📂images
+┃   ┗ 📂icons
+┣ 📂styles
 ┣ 📄 index.html
 ┗ 📄 README.md
 
