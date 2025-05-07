@@ -1,4 +1,4 @@
-# Basic Landing Page <img src="images/icons/title.png" width="40" height="40"> 
+# Basic Landing Page <img src="assets/images/icons/title.png" width="40" height="40"> 
 
 ## Table of Contents
 
